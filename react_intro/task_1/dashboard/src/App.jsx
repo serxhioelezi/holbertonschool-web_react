@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-    <div className="root-notifications">
+      <div className="root-notifications">
 
-    </div>
+      </div>
       <div className="App-header">
         <img src={holbertonLogo} alt="holberton-logo" />
         <h1 style={{ color: "#e1003c" }}>School dashboard</h1>
