@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className="root-notifications">
-
+        <Notifications/>
       </div>
       <div className="App-header">
         <img src={holbertonLogo} alt="holberton-logo" />
