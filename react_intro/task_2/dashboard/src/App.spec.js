@@ -1,37 +1,44 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
+import { getCurrentYear } from "./utils";
 
 test("renders 'School Dashboard' h1 element", () => {
-    render(<App />);
-    const titleElement = screen.getByRole("heading", { level: 1, name: /school dashboard/i });
-    expect(titleElement).toBeInTheDocument();
+  render(<App />);
+  
+  // Title
+  const titleElement = screen.getByRole("heading", { level: 1, name: /school dashboard/i });
+  expect(titleElement).toBeInTheDocument();
 
-    const bodyText = screen.getByText(/login to access the full dashboard/i);
-    expect(bodyText).toBeInTheDocument();
+  // Body text
+  const bodyText = screen.getByText(/login to access the full dashboard/i);
+  expect(bodyText).toBeInTheDocument();
 
-    const footerText = screen.getByText(/copyright/i);
-    expect(footerText).toBeInTheDocument();
+  // Footer text
+  const footerText = screen.getByText(/copyright/i);
+  expect(footerText).toBeInTheDocument();
 
-    const imgElement = screen.getByRole("img");
-    expect(imgElement).toBeInTheDocument();
+  // Image element
+  const imgElement = screen.getByRole("img");
+  expect(imgElement).toBeInTheDocument();
 
+  // Inputs (email + password)
+  const inputs = screen.getAllByRole("textbox"); // only 1 textbox (email)
+  const passwordInput = screen.getByLabelText(/password/i);
+  expect(inputs.length).toBe(1);
+  expect(passwordInput).toBeInTheDocument();
 
-    // 2 input fields (email + password)
-    const inputs = screen.getAllByRole("textbox"); // email is "textbox"
-    const passwordInput = screen.getByLabelText(/password/i);
-    expect(inputs.length).toBe(1); // only 1 textbox (email)
-    expect(passwordInput).toBeInTheDocument();
+  // Labels
+  const emailLabel = screen.getByLabelText(/email/i);
+  const passwordLabel = screen.getByLabelText(/password/i);
+  expect(emailLabel).toBeInTheDocument();
+  expect(passwordLabel).toBeInTheDocument();
 
-    // 2 labels (Email + Password)
-    const emailLabel = screen.getByLabelText(/email/i);
-    const passwordLabel = screen.getByLabelText(/password/i);
-    expect(emailLabel).toBeInTheDocument();
-    expect(passwordLabel).toBeInTheDocument();
+  // Button
+  const button = screen.getByRole("button", { name: /ok/i });
+  expect(button).toBeInTheDocument();
+});
 
-    // Button with text "Ok"
-    const button = screen.getByRole("button", { name: /ok/i });
-    expect(button).toBeInTheDocument();
-
-
-    const getCurrentYear = screen.get
+test("getCurrentYear returns the current year", () => {
+  const year = new Date().getFullYear();
+  expect(getCurrentYear()).toBe(year);
 });

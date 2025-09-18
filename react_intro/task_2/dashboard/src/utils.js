@@ -15,4 +15,4 @@ export const getLatestNotification = () => {
     return "<strong>Urgent requirement</strong> - complete by EOD";
 }
 
-export default { getCurrentYear, getFooterCopy, };
+export default { getCurrentYear, getFooterCopy };
