@@ -1,4 +1,4 @@
-.Notifications{
-    border: 1px dotted red;
+.notification-items {
+    border: 1px dotted #000000;
     padding: 10px;
 }
