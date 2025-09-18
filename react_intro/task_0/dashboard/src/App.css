@@ -1,0 +1,14 @@
+.App-header>img, 
+.App-header>h1{
+  float:left;
+}
+
+.App-body{
+  border-top: 2px solid #E0354B;
+  border-bottom: 2px solid #E0354B;
+  height:450px;
+}
+
+.App-footer{
+  text-align: center;
+}
