@@ -23,7 +23,7 @@ function App() {
         <label htmlFor="password">password</label>
         <input type="password" id="password"></input>
 
-        <button type="submit">Ok</button>
+        <button type="submit">OK</button>
       </div>
       <div className='App-footer'>
         <p>Copyright {getCurrentYear()} -  {getFooterCopy(true)}</p>
