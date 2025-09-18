@@ -4,7 +4,6 @@ import Notifications from './Notifications.jsx';
 import { getCurrentYear, getFooterCopy } from './utils.jsx';
 
 function App() {
-
   return (
     <>
       <div>
