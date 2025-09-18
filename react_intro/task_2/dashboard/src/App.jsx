@@ -1,9 +1,10 @@
 import './App.css'
 import holbertLogo from "./assets/holberton-logo.jpg";
 import Notifications from './Notifications.jsx';
-import { getCurrentYear, getFooterCopy } from './utils.js';
+import { getCurrentYear, getFooterCopy } from './utils.jsx';
 
 function App() {
+
   return (
     <>
       <div>
